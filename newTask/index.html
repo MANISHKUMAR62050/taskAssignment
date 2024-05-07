@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Request UI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="url">
+            <p>API endpoint</p>
+            <div class="input-group">
+                <input type="text" id="apiUrl" placeholder="Enter API URL">
+                <button onclick="sendRequest()">GET</button>
+            </div>
+        </div>
+        <div class="response">
+            <div class="left-section">
+                <p>JSON</p>
+                <textarea name="" rows="20" id="jsonResponse"></textarea>
+            </div>
+            <div class="right-section">
+                <div class="buttons">
+                    <button onclick="generateHtmlPage()">HTML</button>
+                    <button onclick="renderMarkdown()">Markdown</button>
+                </div>
+                <div id="renderedContent">
+                    <textarea name="" id="responseSectionHtml" rows="20"></textarea>
+                    <textarea name="" id="responseSectionMark" rows="20" style="display: none"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
